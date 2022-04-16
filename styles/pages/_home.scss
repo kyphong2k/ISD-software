@@ -1,0 +1,326 @@
+@use "../abstracts"as *;
+
+.zerif_full_site {
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    position: fixed;
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.content-section {
+    padding: 22.5rem 0 0;
+    height: fit-content;
+    position: relative;
+    z-index: 3;
+    overflow-x: hidden;
+
+    .padding-page.header-section {
+        @include resizeTrick;
+
+        padding-bottom: 15rem;
+
+        .content-intro {
+            padding: 7.5rem 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3.5rem;
+
+            &__text {
+                text-align: center;
+                font-size: 5.5rem;
+                line-height: 6.5rem;
+                color: #fff;
+                text-transform: uppercase;
+                word-wrap: break-word;
+
+                div {
+                    text-transform: uppercase;
+                    font-family: inherit;
+                }
+            }
+
+            h3 {
+                font-size: 3rem;
+                color: #fff;
+                text-align: center;
+                font-family: 'Montserrat', Helvetica, sans-serif;
+            }
+
+            .button {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &-link {
+                    width: fit-content;
+                    display: inline-block;
+                    height: 5rem;
+                    padding: 1.3rem 3.5rem;
+                    font-size: 1.4rem;
+                    line-height: 1.4;
+                    color: #fff;
+                    text-transform: uppercase;
+                    background: rgba(252, 95, 69, 0.8) !important;
+                    border-radius: .5rem;
+                    border-width: .2rem;
+                    border-style: solid;
+                    border-color: #fc5f45;
+
+                    &:hover {
+                        border-width: 2px;
+                        border-style: solid;
+                        border-color: #fc5f45 !important;
+                        background: #fc5f45 !important;
+                        color: #63565a;
+                    }
+                }
+            }
+        }
+    }
+
+    .shortcodes-section {
+        background-color: rgba(255, 255, 255, 1);
+        width: 100vw;
+
+
+        .padding-page.shortcodes {
+            @include resizeTrick;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7.5rem;
+            padding: 10rem 0;
+
+            .shortcodes-header {
+                width: 100%;
+                text-align: center;
+
+                h2 {
+                    font-size: 4.5rem;
+                    line-height: 4rem;
+                    color: #2e3037 !important;
+                    font-weight: 700;
+                }
+            }
+
+            .shortcodes-widget {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                column-gap: 3rem;
+
+                &-item {
+                    max-width: 100%;
+                    height: fit-content;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .title {
+                        text-transform: uppercase;
+                        margin-bottom: 3rem;
+                        font-weight: bold;
+                        font-size: 1.7rem;
+                        position: relative;
+                        color: #404040;
+                        width: fit-content;
+
+                        &::after {
+                            position: absolute;
+                            margin: auto;
+                            z-index: 1;
+                            content: "";
+                            width: 75%;
+                            height: 2px;
+                            background: #e96656;
+                            bottom: -9px;
+                            left: 12.5%;
+                        }
+                    }
+
+                    .description {
+                        word-wrap: break-word;
+                        text-align: center;
+                        font-family: 'Titillium Web', sans-serif !important;
+                        color: #919495 !important;
+                        font-size: 1.4rem;
+                        line-height: 1.5;
+                    }
+                }
+            }
+        }
+
+    }
+
+    .about-us-section {
+        width: 100vw;
+        background-color: #2e3037;
+        height: fit-content;
+        padding: 10rem 0;
+
+        .padding-page.about {
+            padding-bottom: 10rem;
+            @include resizeTrick;
+            .about-header {
+                padding-bottom: 7.5rem;
+                text-align: center;
+
+                h2 {
+                    color: #fff;
+                }
+            }
+
+            .about-content {
+                display: grid;
+                max-width: 100%;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 3rem;
+
+                &-title {
+
+                    max-width: 100%;
+
+                    h3 {
+                        width: 100%;
+                        max-width: 100%;
+                        color: #fff;
+                        font-weight: 300;
+                        font-size: 6rem;
+                        line-height: 1.3;
+                        text-align: right;
+                        font-family: 'Titillium Web', sans-serif;
+                    }
+                }
+
+                &-desc {
+                    p {
+                        text-align: left;
+                        font-size: 1.4rem;
+                        line-height: 2.5rem;
+                        color: #919495 !important;
+                        font-family: "Titillium Web", sans-serif !important;
+                        padding: 1.5rem 0;
+                    }
+
+                    p:nth-child(1) {
+                        a {
+                            font-size: inherit;
+                            font-family: inherit;
+                            line-height: inherit;
+                            color: #f44e00;
+                        }
+                    }
+
+                }
+
+                &-skills {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    &-item {
+                        display: flex;
+                        .number-wrapper{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border: 7px solid #f44e00;
+                            border-radius: 50%;
+                            .number{
+                                color: white;
+                                font-size: 14px;
+
+                            }
+                        }
+                        &-desc {
+                            margin-left: 1.2rem;
+                            color: rgb(192, 205, 207);
+                            text-transform: uppercase;
+                            font-size: 1.6rem;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .padding-page.about-customer{
+            @include resizeTrick;
+            .line-header {
+                width: 100%;
+                height: 5px;
+                border-top: #4c4c4c 1px solid;
+                border-bottom: #4c4c4c 1px solid;
+                color: white;
+                font-size: 1.6rem;
+                font-weight: bold;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:after {
+                    content: "OUR CUSTOMERS";
+                    background: rgba(39, 39, 39, 1);
+                    padding: 0.2rem 1.5rem;
+
+                }
+            }
+            .about-customer-list {
+                margin-top: 4rem;
+                padding-top: .5rem;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                max-width: 100%;
+                gap: 2.5rem;
+                &-item {
+                    width: 13rem;
+                    height: 13rem;
+                    a{
+                        display: block;
+                        max-width: 100%;
+                        max-height: 100%;
+                        &:hover img{
+                            opacity: 1;
+                        }
+                        img {
+                            width: 13rem;
+                            height: 13rem;
+                            max-width: 100%;
+                            max-height: 100%;
+                            border-radius: 1rem;
+                            opacity: 0.8;
+                            transition: opacity linear .2s;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 991px) {
+        .padding-page {
+            .content-intro {
+
+                &__text {
+                    font-size: 4.5rem;
+                    line-height: 5.5rem;
+                }
+            }
+        }
+    }
+}
