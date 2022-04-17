@@ -539,8 +539,100 @@
     }
 
     .map-section {
-        
+        background-color: #fff;
+        height: 50rem;
+        width: 100%;
+        overflow: hidden;
+        .map-api{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+    }
 
+    .contact-section {
+        padding: 10rem 0;
+        background-color: transparent;
+        .contact {
+            @include resizeTrick;
+            &-header {
+                h2 {
+                    color: #fff;
+                    text-transform: capitalize;
+                }
+            }
+            &-form {
+                width: 100%;
+                form {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    .contact-form-infos {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 3rem;
+                        input {
+                            height: 46px;
+                            padding: .9rem 1.5rem;
+                            background: rgba(255,255,255, 0.95);
+                            border-radius: .4rem;
+                            font-size: 1.4rem;
+                            outline: none;
+                            color: #1f2124 ;
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            &:focus {
+                                border-color: #66afe9;
+                            }
+                        }
+                    }
+                    .contact-form-message {
+                        width: 100%;
+                        textarea {
+                            font-size: 1.4rem;
+                            color: #1f2124 ;
+                            width: 100%;
+                            min-height: 25rem;
+                            padding: .9rem 1.5rem;
+                            outline: none;
+                            border: 1px solid rgba(0, 0, 0, 0.1);
+                            border-radius: .4rem;
+                            &:focus {
+                                border-color: #66afe9;
+
+                            }
+                        }
+                    }
+                    .contact-form-btn {
+                        width: 100%;
+                        display: flex;
+                        justify-content: flex-end;
+                        margin: 1rem 0;
+                        a {
+                            display: flex;
+                            align-items: center;
+                            color: #fff;
+                            background-color: #f44e00;
+                            padding: 1.3rem 3.5rem;
+                            cursor: pointer;
+                            height: 4.7rem;
+                            border: none;
+                            border-radius: .5rem;
+                            text-align: center;
+                            font-size: 1.4rem;
+                            font-weight: bold;
+                            font-family: inherit;
+                            text-transform: uppercase;
+                            &:hover {
+                                color: #f44e00;
+                                text-transform: uppercase;
+                                background-color: #cb4332 !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     @media (max-width: 991px) {
         .padding-page {

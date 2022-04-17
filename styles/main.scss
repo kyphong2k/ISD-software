@@ -3,6 +3,7 @@
 @use "./pages"as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Titillium+Web:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -23,16 +24,20 @@ body {
 }
 
 .padding-page {
+    padding: 0 3rem;
+
     @media (max-width: 768px) {
-        padding-left: 0.2rem;
-        padding-right: 0.2rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
 
     }
 }
+
 .title-section {
     padding-bottom: 7.5rem;
     text-align: center;
 }
+
 h1,
 h2,
 h3 {
@@ -46,7 +51,7 @@ h1 {
 }
 
 h2 {
-    
+
     font-size: 4.5rem;
     line-height: 4rem;
     font-weight: 700;
@@ -64,7 +69,31 @@ li {
 a {
     text-decoration: none;
 }
-
+.scroll-top-btn {
+    display: none;
+    padding: .5rem 1.5rem;
+    height: 5.5rem;
+    width: 6rem;
+    background-color: #000000;
+    opacity: 0.7;
+    position: fixed;
+    bottom: 3%;
+    right: 2%; 
+    z-index: 6;
+    border: none;
+    cursor: pointer;
+    transition: all linear .7s;
+    &.open {
+        display: block;
+    }
+    &:hover {
+        opacity: 1;
+    }
+    i {
+        color: #fff;
+        font-size: 1.4rem;
+    }
+}
 .button {
     padding: 1.3rem 3.5rem;
     margin: 1rem;
@@ -331,6 +360,7 @@ a {
         -moz-transition: all 0.3s ease;
         -o-transition: all 0.3s ease;
         transition: all 0.3s linear;
+
         &.toggled {
             height: 5.8rem;
             bottom: -5.8rem;
@@ -338,16 +368,17 @@ a {
 
             form {
 
-            input[type="text"] {
+                input[type="text"] {
 
-                height: 3.9rem;
+                    height: 3.9rem;
 
-            }
-            input[type="button"] {
+                }
 
-                height: 3.7rem;
+                input[type="button"] {
 
-            }
+                    height: 3.7rem;
+
+                }
             }
         }
 
@@ -357,8 +388,9 @@ a {
             justify-content: center;
             align-items: center;
             gap: 1.5rem;
-            position:relative;
+            position: relative;
             z-index: 3;
+
             input[type="text"] {
                 padding: .3rem !important;
                 height: 0rem;
@@ -371,6 +403,7 @@ a {
                 -moz-transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 transition: all 0.3s linear;
+
                 &::placeholder {
                     color: #1f2124 !important;
                     font-size: 1.7rem;
@@ -394,6 +427,7 @@ a {
                 -moz-transition: all 0.3s ease;
                 -o-transition: all 0.3s ease;
                 transition: all 0.3s linear;
+
                 &:hover {
                     background: #404040;
                 }
@@ -407,6 +441,96 @@ a {
                 &-list {
                     gap: 0;
                 }
+            }
+        }
+    }
+}
+
+.footer-section {
+    background: #2e3037 !important;
+    position: relative;
+    z-index: 3;
+
+    .footer {
+        @include resizeTrick;
+        display: grid;
+        grid-template-columns: 4fr 3fr 3fr 2fr;
+        column-gap: 3rem;
+
+        &-detail-info {
+            display: flex;
+            padding: 6.7rem 0 3rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+
+            i {
+                font-size: 2.4rem;
+                margin-bottom: 1rem;
+            }
+
+            &.copyright {
+                background: #202226 !important;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                .social-icon-list {
+                    padding-top: 1rem;
+                    display: flex;
+                    flex-direction: row nowrap;
+                    gap: 1rem;
+
+                    a {
+                        display: flex;
+                        text-decoration: none;
+                        align-items: flex-end;
+
+                        i {
+                            color: #fff !important;
+                            opacity: 0.7;
+                            font-size: 1.6rem;
+                            transition: opacity .2s linear;
+                            margin: 0;
+                        }
+
+                        &:hover i {
+                            opacity: 1;
+                        }
+                    }
+
+                }
+
+                p.footer-text {
+                    cursor:text;
+                    padding-top: 2.4rem;
+                    padding-bottom: 9rem;
+                    &:hover {
+                        color: #939393 !important;
+                    }
+                }
+            }
+
+            .footer-text {
+                color: #939393 !important;
+                text-align: center;
+                font-family: inherit;
+                font-size: 16px;
+                font-style: inherit;
+                font-weight: bold;
+                margin-bottom: .3rem;
+                transition: color .5s linear;
+                &:hover {
+                    color: #e96656 !important;
+                }
+
+            }
+
+            hr {
+                background-color: #ccc;
+                border: 0;
+                height: 1px;
+                margin: .5rem;
+                width: 100%;
+
             }
         }
     }
