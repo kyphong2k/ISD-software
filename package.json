@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kyphong2k.github.io/ISD-software/",
   "scripts" : {
     "watch-sass": "sass styles --no-source-map --style=compressed --watch"
   },

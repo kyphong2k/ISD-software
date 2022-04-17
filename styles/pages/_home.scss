@@ -28,7 +28,7 @@
     z-index: 3;
     overflow-x: hidden;
 
-    .padding-page.header-section {
+    .header-section {
         @include resizeTrick;
 
         padding-bottom: 15rem;
@@ -104,7 +104,6 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 7.5rem;
             padding: 10rem 0;
 
             .shortcodes-header {
@@ -176,6 +175,7 @@
         .padding-page.about {
             padding-bottom: 10rem;
             @include resizeTrick;
+
             .about-header {
                 padding-bottom: 7.5rem;
                 text-align: center;
@@ -235,18 +235,21 @@
 
                     &-item {
                         display: flex;
-                        .number-wrapper{
+
+                        .number-wrapper {
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             border: 7px solid #f44e00;
                             border-radius: 50%;
-                            .number{
+
+                            .number {
                                 color: white;
                                 font-size: 14px;
 
                             }
                         }
+
                         &-desc {
                             margin-left: 1.2rem;
                             color: rgb(192, 205, 207);
@@ -258,8 +261,10 @@
                 }
             }
         }
-        .padding-page.about-customer{
+
+        .padding-page.about-customer {
             @include resizeTrick;
+
             .line-header {
                 width: 100%;
                 height: 5px;
@@ -271,6 +276,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
                 &:after {
                     content: "OUR CUSTOMERS";
                     background: rgba(39, 39, 39, 1);
@@ -278,6 +284,7 @@
 
                 }
             }
+
             .about-customer-list {
                 margin-top: 4rem;
                 padding-top: .5rem;
@@ -287,16 +294,20 @@
                 align-items: center;
                 max-width: 100%;
                 gap: 2.5rem;
+
                 &-item {
                     width: 13rem;
                     height: 13rem;
-                    a{
+
+                    a {
                         display: block;
                         max-width: 100%;
                         max-height: 100%;
-                        &:hover img{
+
+                        &:hover img {
                             opacity: 1;
                         }
+
                         img {
                             width: 13rem;
                             height: 13rem;
@@ -312,6 +323,225 @@
         }
     }
 
+    .our-team-section {
+        padding: 10rem 0;
+        background-color: #ffffff;
+
+        .our-team {
+            @include resizeTrick;
+
+            &-header {
+                h2 {
+                    color: #2e3037;
+                    margin-bottom: 1rem;
+                }
+
+                h6 {
+                    color: #919495;
+                    font-size: 1.6rem;
+                    line-height: 1.6;
+                }
+            }
+
+            &-list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 3rem;
+
+                &-member {
+                    max-width: 25%;
+                    width: 25%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    overflow: hidden;
+                    padding-bottom: 3.5rem;
+                    border-radius: .5rem;
+
+                    .member-img {
+                        width: 17.4rem;
+                        height: 17.4rem;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin-bottom: 2.5rem;
+
+                        img {
+                            object-fit: cover;
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+                    .member-details {
+                        padding-bottom: 1rem;
+                        text-align: center;
+
+                        &-name {
+                            margin: 1.5rem 0;
+                            text-transform: uppercase;
+                            color: #404040;
+                            font-weight: 700;
+                            position: relative;
+                            margin-top: 15px;
+                            font-size: 17px;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                height: 2px;
+                                width: 75%;
+                                background-color: #fc5f45;
+                                bottom: -9px;
+                                left: 12.5%;
+                            }
+                        }
+
+                        &-position {
+                            color: #919495 !important;
+                            font-size: 14px !important;
+                        }
+                    }
+
+                    .member-socials {
+                        display: flex;
+                        gap: .5rem;
+
+                        a {
+                            font-size: 1.8rem;
+                            padding: .3rem;
+
+                            &:hover i {
+                                color: #f44e00;
+                            }
+
+                            i {
+                                transition: color linear .3s;
+                                color: #808080;
+
+                            }
+
+                        }
+                    }
+
+                    &:hover .member-brief-desc {
+                        top: 0;
+                        opacity: 1;
+                        transition: all linear .6s;
+                        border-radius: .5rem;
+
+                    }
+
+                    .member-brief-desc {
+                        background: #333;
+                        width: 100%;
+                        min-height: 19rem;
+                        position: absolute;
+                        left: 0;
+                        top: -20rem;
+                        opacity: 0;
+                        transition: all linear .8s;
+                        border-radius: .5rem;
+                        overflow: hidden;
+
+                        p {
+                            color: #fff;
+                            padding: 1.5rem;
+                            text-align: left;
+                            font-size: 1.3rem;
+                            line-height: 2.0rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .testimonial-section {
+        padding: 10rem 0;
+        background-color: #fc5f45;
+
+        .testimonial {
+            @include resizeTrick;
+
+            &-header {
+                h2 {
+                    color: #fff;
+                }
+            }
+
+            &-feedback {
+                display: flex;
+                justify-content: center;
+                gap: 2.6rem;
+                &-box {
+                    width: 30%;
+                    padding: 2.5rem;
+                    background-color: #ffffff;
+                    height: fit-content;
+                    .feedback-messages {
+                        max-width: 100%;
+                        color: #334346 !important;
+                        font-family: 'Titillium Web', sans-serif;
+                        font-size: 1.5rem;
+                        font-weight: normal;
+                        line-height: 1.5;
+                    }
+
+                    .feedback-client {
+                        margin-top: 3rem;
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: .5rem;
+                        &-quote-left {
+                            align-self: flex-start;
+                            font-size: 4.5rem;
+                            color: #919495;
+                        }
+
+                        &-info {
+                            align-self: center;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            font-family: inherit;
+                            font-size: 16px;
+                            font-weight: bold;
+                            .name {
+                                color: #909090;
+                                
+                            }
+
+                            .position {
+                                color: black;
+                                font-weight: normal;
+                                font-size: 1.4rem;
+                            }
+                        }
+                        &-img {
+                            width: 7rem;
+                            height: 7rem;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            align-self: flex-end;
+                            margin-right: 1rem;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .map-section {
+        
+
+    }
     @media (max-width: 991px) {
         .padding-page {
             .content-intro {
