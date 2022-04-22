@@ -397,7 +397,7 @@ a {
     .padding-page:last-child {
         .navbar__mobile-list {
             display: none;
-            padding: 0.75rem 1rem;
+            padding: 2rem 1rem;
             z-index: 6;
             max-width: 100%;
             &.open {
@@ -732,8 +732,8 @@ a {
             grid-template-columns: 4fr 3fr 3fr;
             column-gap: 0rem;
             &-detail-info {
-                &.copy-right {
-                    grid-column: 1/10 !important;
+                &.copyright {
+                    grid-column: 1/10 ;
                 }
 
             }
@@ -747,7 +747,6 @@ a {
                 padding: 3rem 0;
                 grid-column: 1/10;
                 &.copy-right {
-                    grid-column: auto;
                 }
 
             }

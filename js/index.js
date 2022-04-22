@@ -35,6 +35,7 @@ function showMenuMobile(element) {
 }
 function showSubmenu(element) {
   element.parentElement.classList.toggle("open");
+  
 }
 function showSupermenu(element) {
   element.parentElement.classList.toggle("open");
