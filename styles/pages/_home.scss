@@ -92,6 +92,26 @@
                 }
             }
         }
+        @include Responsive(tablet) {
+
+            .content-intro {
+                &__text {
+                    font-size: 4.1rem;
+                    line-height: 4.9rem;
+                }
+            }
+        }
+        @include Responsive(mobile) {
+            
+                .content-intro {
+                    &__text {
+                        font-size: 3.2rem;
+                        line-height: 3.7rem;
+                    }
+                }
+                
+            
+        }
     }
 
     .shortcodes-section {
@@ -115,6 +135,7 @@
                     line-height: 4rem;
                     color: #2e3037 !important;
                     font-weight: 700;
+                    text-align: center;
                 }
             }
 
@@ -138,6 +159,7 @@
                         position: relative;
                         color: #404040;
                         width: fit-content;
+                        text-align: center;
 
                         &::after {
                             position: absolute;
@@ -163,7 +185,25 @@
                 }
             }
         }
+    @include Responsive(tablet) {
+        .padding-page.shortcodes {
+            .shortcodes-widget {
+                grid-template-columns: 1fr;
+                row-gap: 7.5rem;
+            }
+        }
+    }
+    @include Responsive(mobile) {
+        .padding-page.shortcodes {
+            .title-section {
+                h2 {
 
+                    font-size: 6.5vw;
+                }
+            }
+        }
+    }
+    
     }
 
     .about-us-section {
@@ -321,6 +361,35 @@
                 }
             }
         }
+        @include Responsive(mdesk) {
+            .padding-page.about {
+                .about-header.title-section {
+                    h2 {
+                        font-size: 6.5vw;
+                    }
+
+                }
+                .about-content {
+                    grid-template-columns: 1fr;
+                    text-align: center;
+                    &-title {
+                        text-align: center;
+                        padding-bottom: 4rem;
+                        h3 {
+                            text-align: center;
+                            font-size: 8vw;
+                        }
+                    }
+                    &-skills {
+                        gap: 2.5rem;
+                    }
+                }
+            }
+            .padding-page.about-customer {
+
+            }
+        }
+        
     }
 
     .our-team-section {
@@ -344,14 +413,12 @@
             }
 
             &-list {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 3rem;
-
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1.5rem;
+                padding: 0 6rem;
                 &-member {
-                    max-width: 25%;
-                    width: 25%;
+                    width: 80%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -456,6 +523,21 @@
                 }
             }
         }
+        @include Responsive(tablet) {
+            .our-team {
+                &-list {
+                    grid-template-columns: 1fr 1fr;
+                    
+                }
+            }
+        }
+        @include Responsive (mobile) {
+            .our-team {
+                &-list {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
     }
 
     .testimonial-section {
@@ -532,6 +614,42 @@
                                 height: 100%;
                             }
                         }
+                    }
+                }
+            }
+        }
+        @include Responsive (mdesk) {
+            .testimonial {
+                &-feedback {
+                    flex-direction: column;
+                    align-items: center;
+                    &-box {
+                        width: 70%;
+                        .feedback-client {
+                            display: flex;
+                            align-items: center !important;
+                            justify-content: space-between;
+                            flex-direction: row;
+                        }
+
+                    }
+                }
+            }
+        }
+        @include Responsive(tablet) {
+            .testimonial {
+                &-feedback {
+                    
+                    &-box {
+                        width: 100%;
+                        .feedback-client {
+                            justify-content: flex-start;
+                            &-img {
+                                display: none;
+                            }
+                        }
+                       
+
                     }
                 }
             }
@@ -633,16 +751,21 @@
                 }
             }
         }
-    }
-    @media (max-width: 991px) {
-        .padding-page {
-            .content-intro {
-
-                &__text {
-                    font-size: 4.5rem;
-                    line-height: 5.5rem;
+        @include Responsive (tablet) {
+            .contact {
+                &-form {
+                    form {
+                        .contact-form-infos {
+                            grid-template-columns: 1fr;
+                            row-gap: 2rem;
+                        }
+                        .contact-form-btn {
+                            justify-content: center;
+                        }
+                    }
                 }
             }
         }
     }
+    
 }

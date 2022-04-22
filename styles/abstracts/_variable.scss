@@ -4,6 +4,21 @@
     width: 100%;
     
 }
+// khai bao cac kich thuoc va ham viet responsive
+$mini-desktop: 1023px;
+$tablet: 767px;
+$mobile: 479px;
+@mixin Responsive($canvas) {
+    @if $canvas == mdesk {
+        @media (max-width: $mini-desktop) {@content;}
+    }
+    @else if $canvas == tablet {
+        @media (max-width: $tablet) {@content;}
+    }
+    @else if $canvas == mobile {
+        @media (max-width: $mobile) {@content;}
+    }
+}
 $clr-nav-text: #919495;
 $clr-nav-border: #f15d22;
 $clr-nav-hover: rgb(241,93,34);

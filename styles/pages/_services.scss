@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.main-content-details.service {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+
+    .service {
+        &-content {
+            &-desc {
+                color: #2e3037 !important;
+                font-family: 'Titillium Web', sans-serif;
+                
+            }
+        }
+        &-img {
+            width: 40rem;
+            max-height: 25rem;
+
+            object-fit: cover;
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+    }
+}

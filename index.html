@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
             <div class="navbar__right">
                 <ul class="navbar__right-list">
                     <li class="navbar__right-list-item">
-                        <a href="#">
+                        <a href="./services.html">
                             services
                         </a>
                     </li>
@@ -28,7 +28,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="sub-menu-item">
-                                <a href="#" class="sub-menu-item__link">
+                                <a href="./working.html" class="sub-menu-item__link">
                                     Let’s get started
                                 </a>
                             </li>
@@ -57,7 +57,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="sub-menu-item">
-                                <a href="#" class="sub-menu-item__link">
+                                <a href="./careers.html" class="sub-menu-item__link">
                                     Vacancies
                                 </a>
                             </li>
@@ -76,7 +76,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="sub-menu-item">
-                                <a href="#" class="sub-menu-item__link">
+                                <a href="./blogs.html" class="sub-menu-item__link">
                                     Tech
                                 </a>
                             </li>
@@ -95,7 +95,7 @@
                         </a>
                         <ul class="sub-menu">
                             <li class="sub-menu-item">
-                                <a href="#" class="sub-menu-item__link">
+                                <a href="./about-us.html" class="sub-menu-item__link">
                                     Success Story
                                 </a>
                             </li>
@@ -106,7 +106,7 @@
                                     </a>
                                 <ul class="super-menu">
                                     <li class="super-menu-item">
-                                        <a href="#">
+                                        <a href="./about-inner.html">
                                             Inther Group
                                         </a>
                                     </li>
@@ -177,6 +177,9 @@
                 <div class="navbar__right-search">
                     <img src="./assets/search-icon.png" alt="">
                 </div>
+                <button class="navbar__right-mobile-btn" onclick="showMenuMobile(this)">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
         </div>
         <div class="header-search">
@@ -184,6 +187,174 @@
                 <input type="text" placeholder="Search...">
                 <input type="button" class="search-btn" value="SEARCH">
             </form>
+        </div>
+        <div class="padding-page">
+            <ul class="navbar__mobile-list">
+                <li class="navbar__mobile-list-item">
+                    <a href="./services.html">
+                        services
+                    </a>
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        working with us
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./working.html" class="sub-menu-item__link">
+                                Let’s get started
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Advantages to work with us
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Skills
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Methodologies
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        careers
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./careers.html" class="sub-menu-item__link">
+                                Vacancies
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Internships
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        blog
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./blogs.html" class="sub-menu-item__link">
+                                Tech
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Lifestyle
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        about us
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./about-us.html" class="sub-menu-item__link">
+                                Success Story
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Projects
+                            </a>
+                            <div class="dropdown-supermenu-btn" onclick="showSupermenu(this)">
+                                <i class="fa-solid fa-caret-down"></i>
+
+                            </div>
+                            <ul class="super-menu">
+                                <li class="super-menu-item">
+                                    <a href="./about-inner.html">
+                                        Inther Group
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Becor
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        River Island
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Aldipress Swets
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Stock Control
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Health System
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Zoet Zout Zuur
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Humble Buildings
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Helloprint
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        PrimeVision
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                About ISD
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
         </div>
     </div>
 

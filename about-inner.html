@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/2430ae7312.js" crossorigin="anonymous"></script>
+    <div class="navbar">
+        <div class="padding-page"> 
+            <a href="./index.html" class="navbar-brand">
+                <img src="./assets/brand-img.png" alt="">
+            </a>
+            <div class="navbar__right">
+                <ul class="navbar__right-list">
+                    <li class="navbar__right-list-item">
+                        <a href="./services.html">
+                            services
+                        </a>
+                    </li>
+                    <li class="navbar__right-list-item">
+                        <a href="#">
+                            working with us
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="./working.html" class="sub-menu-item__link">
+                                    Let’s get started
+                                </a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-item__link">
+                                    Advantages to work with us
+                                </a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-item__link">
+                                    Skills
+                                </a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-item__link">
+                                    Methodologies
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="navbar__right-list-item">
+                        <a href="#">
+                            careers
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="./careers.html" class="sub-menu-item__link">
+                                    Vacancies
+                                </a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-item__link">
+                                    Internships
+                                </a>
+                            </li>
+                        </ul>
+                        
+                    </li>
+                    <li class="navbar__right-list-item">
+                        <a href="#">
+                            blog
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="./blogs.html" class="sub-menu-item__link">
+                                    Tech
+                                </a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-item__link">
+                                    Lifestyle
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li class="navbar__right-list-item sub-active">
+                        <a href="#">
+                            about us
+                            <i class="fa-solid fa-caret-down"></i>
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="sub-menu-item">
+                                <a href="./about-us.html" class="sub-menu-item__link">
+                                    Success Story
+                                </a>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-item__link">
+                                    Projects
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    </a>
+                                <ul class="super-menu">
+                                    <li class="super-menu-item">
+                                        <a href="./about-inner.html">
+                                            Inther Group
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            Becor
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            River Island
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            Aldipress Swets
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            Stock Control
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            Health System
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            Zoet Zout Zuur
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            Humble Buildings
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            Helloprint
+                                        </a>
+                                    </li>
+                                    <li class="super-menu-item">
+                                        <a href="#">
+                                            PrimeVision
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="sub-menu-item">
+                                <a href="#" class="sub-menu-item__link">
+                                    About ISD
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+                </ul>
+                <ul class="qtranslate-chooser">
+                    <li class="qtranslate-chooser-lang">
+                            <img src="./assets/american-flag.png" alt="">
+                    </li>
+                    <li class="qtranslate-chooser-lang">
+                            <img src="./assets/nederlands-flag.png" alt="">
+                    </li>
+                </ul>
+                <div class="navbar__right-search">
+                    <img src="./assets/search-icon.png" alt="">
+                </div>
+                <button class="navbar__right-mobile-btn" onclick="showMenuMobile(this)">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="header-search">
+            <form>
+                <input type="text" placeholder="Search...">
+                <input type="button" class="search-btn" value="SEARCH">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
