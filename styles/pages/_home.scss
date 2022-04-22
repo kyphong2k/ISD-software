@@ -385,9 +385,7 @@
                     }
                 }
             }
-            .padding-page.about-customer {
-
-            }
+           
         }
         
     }
@@ -527,7 +525,7 @@
             .our-team {
                 &-list {
                     grid-template-columns: 1fr 1fr;
-                    
+                    justify-items: center;
                 }
             }
         }
