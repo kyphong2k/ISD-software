@@ -1,27 +1,92 @@
 @use "../abstracts" as *;
 
 .main-content-details.service {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
+    
 
     .service {
-        &-content {
-            &-desc {
-                color: #2e3037 !important;
-                font-family: 'Titillium Web', sans-serif;
-                
+        
+        &-image {
+            float: right;
+            max-width: 400px;
+            padding-left: 2.5rem;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+        &-content-desc {
+            color: #2e3037 !important;
+            font-family: 'Titillium Web', sans-serif;
+            font-size: 1.6rem;
+            padding-bottom: 2.4rem;
+        }
+        &-content-title {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+            padding-bottom: 1rem;
+            b {
+                font-size: 1.8rem;
+                color: #292525;
+                font-family: inherit;
+                font-weight: #333;
             }
         }
-        &-img {
-            width: 40rem;
-            max-height: 25rem;
+        &-list {
+            
+            &-item {
+                text-align: left;
+                font-size: 1.6rem;
+                color: #2e3037 !important;
+                font-family: 'Titillium Web', sans-serif;
+                padding-bottom: 1.2rem;
+                line-height: 1.6;
+                background: url("../../assets/icons/arrowright.png") 0 8px no-repeat;
+                padding-left: 2rem;
+                margin-left: 2.5rem;
+            }
+        }
+        &-content-end {
+            font-size: 1.6rem;
+            color: #2e3037;
+            font-family: 'Titillium Web', sans-serif;
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            a {
+                color: #fc5f45;
+                opacity: 0.9;
+                transition: opacity .5s linear;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+        
+    }
+    @include Responsive (tablet) {
+        .service {
+            display: grid;
+            grid-template-columns: 1fr;
+            display: flex;
+            &-image {
+                display: grid;
+                padding-left: 0;
+                float: none;
+                width: 100%;
+                img {
+                    object-fit: cover;
+                    max-width: 100%;
+                }    
+            }
 
-            object-fit: cover;
-            img {
-                max-width: 100%;
-                max-height: 100%;
+        }
+    @include Responsive(mobile) {
+        .service {
+            &-list {
+                &-item {
+                   margin-left: .5rem;
+                }
             }
         }
     }
+}
 }
