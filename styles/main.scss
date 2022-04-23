@@ -126,8 +126,7 @@ a {
     position: fixed;
     border-bottom: 3px solid $clr-nav-border;
     transition: height linear .5s;
-    z-index: 4;
-
+    z-index: 6;
     &.smaller {
         height: 12.1rem;
         -webkit-transition: all 3s;
@@ -421,6 +420,8 @@ a {
             padding: 2rem 1rem;
             z-index: 6;
             max-width: 100%;
+            max-height: 53rem;
+            overflow-y: scroll;
 
             &.open {
                 display: flex;
