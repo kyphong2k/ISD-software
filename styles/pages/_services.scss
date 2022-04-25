@@ -11,6 +11,9 @@
             padding-left: 2.5rem;
             object-fit: cover;
             margin-bottom: 1rem;
+            img {
+                width: 100%;
+            }
         }
         &-content-desc {
             color: #2e3037 !important;

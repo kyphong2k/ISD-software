@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.main-content-details.careers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    .careers-box {
+        max-width: 100%;
+        height: auto;
+        &__img {
+            overflow: hidden;
+            max-width: 100%;
+            height: auto;
+            &:hover img {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+
+            img {
+                width: 100%;
+                opacity: 0.8;
+                transition: .3s;
+            }
+        }
+    }
+    @include Responsive(tablet) {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        .careers-box {
+            max-width: 60%;
+        }
+    }
+}
