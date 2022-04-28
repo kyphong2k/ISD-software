@@ -26,9 +26,11 @@ body {
 
 .padding-page {
     padding: 0;
+
     @media (max-width: 1238px) {
         padding: 0 2rem;
     }
+
     @media (max-width: 768px) {
         padding: 0 2rem;
 
@@ -129,6 +131,7 @@ a {
     border-bottom: 3px solid $clr-nav-border;
     transition: height linear .5s;
     z-index: 6;
+
     &.smaller {
         height: 12.1rem;
         -webkit-transition: all 3s;
@@ -816,6 +819,7 @@ a {
         padding-left: .5rem;
         margin-bottom: 3rem;
         padding-bottom: 3rem;
+
         &-title {
             display: flex;
             justify-content: flex-start;
@@ -867,17 +871,18 @@ a {
                 background-color: #f44e00;
             }
         }
+
         .widget-list {
             width: 100%;
             word-wrap: break-word;
-    
+
             &-item {
                 margin-left: 3%;
                 padding-left: 1rem;
                 margin: 1.5rem 0;
                 text-align: left;
                 position: relative;
-    
+
                 &::after {
                     content: '';
                     width: 4px;
@@ -888,10 +893,12 @@ a {
                     left: 0;
                     top: 1rem;
                 }
-                &:hover a{
+
+                &:hover a {
                     opacity: 1;
                 }
-                a{
+
+                a {
                     text-decoration: none;
                     font-size: 1.6rem;
                     font-family: inherit;
@@ -900,13 +907,33 @@ a {
                     color: #404040;
                     opacity: 0.7;
                     transition: opacity .6s linear;
-    
+
                 }
             }
         }
     }
+
     @include Responsive(mdesk) {
         grid-template-columns: 1fr;
     }
 }
 
+.page-not-found {
+    display: grid;
+    margin: 0 auto;
+    padding-top: 140px;
+    width: 80%;
+    overflow: hidden;
+    height: fit-content;
+
+    @include Responsive(tablet) {
+        img {
+            display: none;
+
+        }
+        p {
+            padding-top: 20rem;
+        }
+
+    }
+}

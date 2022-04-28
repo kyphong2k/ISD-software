@@ -22,14 +22,14 @@
                             services
                         </a>
                     </li>
-                    <li class="navbar__right-list-item sub-active">
+                    <li class="navbar__right-list-item">
                         <a href="#">
                             working with us
                             <i class="fa-solid fa-caret-down"></i>
                         </a>
                         <ul class="sub-menu">
                             <li class="sub-menu-item">
-                                <a href="./working.html" class="sub-menu-item__link">
+                                <a href="./page404.html" class="sub-menu-item__link">
                                     Let’s get started
                                 </a>
                             </li>
@@ -189,7 +189,181 @@
                 <input type="button" class="search-btn" value="SEARCH">
             </form>
         </div>
+        <div class="padding-page">
+            <ul class="navbar__mobile-list">
+                <li class="navbar__mobile-list-item">
+                    <a href="./services.html">
+                        services
+                    </a>
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        working with us
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./working.html" class="sub-menu-item__link">
+                                Let’s get started
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Advantages to work with us
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Skills
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Methodologies
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        careers
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./careers.html" class="sub-menu-item__link">
+                                Vacancies
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Internships
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        blog
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./blogs.html" class="sub-menu-item__link">
+                                Tech
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Lifestyle
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="navbar__mobile-list-item">
+                    <a href="#">
+                        about us
+                    </a>
+                    <p class="dropdown-menu-btn" onclick="showSubmenu(this)">
+
+                        <i class="fa-solid fa-caret-down"></i>
+                    </p>
+                    <ul class="sub-menu">
+                        <li class="sub-menu-item">
+                            <a href="./about-us.html" class="sub-menu-item__link">
+                                Success Story
+                            </a>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                Projects
+                            </a>
+                            <div class="dropdown-supermenu-btn" onclick="showSupermenu(this)">
+                                <i class="fa-solid fa-caret-down"></i>
+
+                            </div>
+                            <ul class="super-menu">
+                                <li class="super-menu-item">
+                                    <a href="./about-inner.html">
+                                        Inther Group
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Becor
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        River Island
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Aldipress Swets
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Stock Control
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Health System
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Zoet Zout Zuur
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Humble Buildings
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        Helloprint
+                                    </a>
+                                </li>
+                                <li class="super-menu-item">
+                                    <a href="#">
+                                        PrimeVision
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu-item">
+                            <a href="#" class="sub-menu-item__link">
+                                About ISD
+                            </a>
+                        </li>
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
     </div>
-    <!-- navbar -->
+    <!-- end navbar -->
+    <div class="page-not-found" style="">
+        <img src="./assets/background404notfound.jpg" alt="" style="width: 100%; max-width: 100%; height: 500px; object-fit: cover; margin: 0 auto; ">
+        <p style="color:#c7baff; font-size: 4rem; text-align: center;">It's same another template so check athoner link please !</p>
+    </div>
+    <script src="./js/index.js"></script>
+
 </body>
 </html>
