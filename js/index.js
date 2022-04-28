@@ -21,6 +21,21 @@ const openSearchForm = $(".navbar__right-search").addEventListener('click', func
     const headerSearch = $(".header-search").classList.toggle("toggled");
 
 })
+;
+// assign link 404 page to all links have # in attr href
+const assignPageNotFound = (function() {
+  const linkWithSharp = $$(".sub-menu-item__link,.super-menu-item>a");
+  const linkArrayLength = linkWithSharp.length;
+  for(let i =0; i< linkArrayLength; i++) {
+    if(linkWithSharp[i].href.includes('#')) {
+      linkWithSharp[i].href= './page404.html';
+  
+    }
+    else if(linkWithSharp[i].href.includes('working')) {
+      linkWithSharp[i].href='./page404.html'
+    }
+  }
+})();
 // scroll when click button scroll op top
 function scrollOnTop () {
   document.body.scrollTop = 0; // For Safari
