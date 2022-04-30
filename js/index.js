@@ -34,6 +34,9 @@ const assignPageNotFound = (function() {
     else if(linkWithSharp[i].href.includes('working')) {
       linkWithSharp[i].href='./page404.html'
     }
+    else if(linkWithSharp[i].href.includes('about')) {
+      linkWithSharp[i].href='./page404.html'
+    }
   }
 })();
 // scroll when click button scroll op top
