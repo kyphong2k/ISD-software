@@ -50,7 +50,7 @@ const Blogs = [
         date: 'October 02, 2021',
         author: 'Ivan Ceban, Front-End Developer',
         img: './assets/blogs/blog-6.jpg',
-        desc: 'HTML is the alphabet of web development. How many web developers have HTML skills in their CVs? I’d say 90%. How many of them really know how to use it properly? I’d say 40%. The other 50% just don’t care about it. The most common case that I encounter during the Projects ➤ I work in - is using any HTML tag, just to make the layout look similar to the design. If something doesn’t function as expected, it is wrapped into divs, tables, spans and so on, until it fits the design.',
+        desc: 'HTML is the alphabet of web development. How many web developers have HTML skills in their CVs? I’d say 90%. How many of them really know how to use it properly? I’d say 40%. The other 50% just don’t care about it. The most common case that I encounter during the Projects     I work in - is using any HTML tag, just to make the layout look similar to the design. If something doesn’t function as expected, it is wrapped into divs, tables, spans and so on, until it fits the design.',
         link:'#'
     },
     {
@@ -66,7 +66,7 @@ const Blogs = [
         id: 8,
         title: 'Agile in the Real World: Going Above and Beyond the Guide',
         date: 'August 04, 2021',
-        author: 'Vitalii Stepovenco, Senior IT Projects ➤ Manager',
+        author: 'Vitalii Stepovenco, Senior IT Projects     Manager',
         img: './assets/blogs/blog-8.jpg',
         desc: 'During one of the internal training sessions that I was giving on Scrum - a member from the creative team said that he didn’t care about the values and philosophy: “Just tell me what to do in Jira and how”. That was a huge input for me. For some professionals and clients, Agile remains just a buzzword.',
         link:'#'
